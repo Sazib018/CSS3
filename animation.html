@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+      @keyframes asif{
+        0%{
+          top: 0px;
+          left: 0px;
+        }
+        25%{
+          top: 160px;
+          left: 100px;
+        }
+        50%{
+          top: 0px;
+          left: 200px;
+        }
+        75%{
+        top: 160px;
+        left: 300px;
+
+        }
+        100%{ top: 0px;
+          left: 360px;
+        }
+      }
+      @keyframes sazib{
+      from{
+        transform: rotate(180deg);
+        to{
+          transform: rotate(360deg);
+        }
+      }
+      }
+      body{
+        display: flex;
+        justify-content: center;
+      }
+      .container-1{
+        width: 200px;
+        height: 200px;
+        background-color: red;
+      }  
+      .container-2{
+        width: 200px;
+        height: 200px;
+        background-color:greenyellow;
+      }
+      .container-1:hover .container-2{
+       animation: sazib 2s infinite;
+      }
+      .container{
+        width: 400px;
+        height: 200px;
+        border: 2px solid red;
+        margin-left:50px ;
+      }
+      .ball{
+        background-color: blue;
+        height: 40px;
+        width: 40px;
+        border-radius: 100%;
+        position: relative;
+        animation: asif 1s infinite alternate;
+      }
+    </style>
+</head>
+<body>
+  <div class="container-1">
+    <div class="container-2">
+
+    </div>
+  </div> 
+  
+  <div class="container">
+    <div class="ball">
+
+    </div>
+  </div>
+</body>
+</html>
